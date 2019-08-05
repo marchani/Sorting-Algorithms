@@ -7,6 +7,17 @@ using namespace std;
 
 
 //
+// swap()
+//
+void swap(int* a, int* b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+
+//
 // partition()
 //
 int partition(vector< int >& array1, int lowIndex, int highIndex)
@@ -19,18 +30,14 @@ int partition(vector< int >& array1, int lowIndex, int highIndex)
 		if (array1[j] < pivot)
 		{
 			// Swap A[i] with A[j].
-			int temp = array1[i];
-			array1[i] = array1[j];
-			array1[j] = temp;
+			swap(&array1[i], &array1[j]);
 
 			i++;
 		}
 	}
 
 	// Swap A[i] with A[hi].
-	int temp = array1[i];
-	array1[i] = array1[highIndex];
-	array1[highIndex] = temp;
+	swap(&array1[i], &array1[highIndex]);
 
 	return i;
 }
@@ -128,10 +135,13 @@ void printArray(const vector< int >& arr)
 int main()
 {
 	/* EXAMPLE 1: Quicksort */
+	/* Average Performance: O(n log n) */
+	/* Worst-Case Performance: O(n^2) 
+	/* Worst-Case Space Complexity: O(log n) */
 
 	cout << "Example 1: Quicksort" << endl;
 
-	vector< int > unsortedArray1 = { 0, 2, 3, 1, 2, 0, 2, 3, 1, 2 };
+	vector< int > unsortedArray1 = { 12, 11, 13, 5, 6, 7 };
 
 	quicksort(unsortedArray1, 0, unsortedArray1.size() - 1);
 
@@ -141,10 +151,13 @@ int main()
 
 
 	/* EXAMPLE 2: Merge Sort */
-	
+	/* Average Performance: O(n log n) */
+	/* Worst-Case Performance: O(n log n)
+	/* Worst-Case Space Complexity: O(n) */
+
 	cout << "Example 2: Merge Sort" << endl;
 
-	vector< int > unsortedArray2 = { 0, 2, 3, 1, 2, 0, 2, 3, 1, 2 };
+	vector< int > unsortedArray2 = { 12, 11, 13, 5, 6, 7 };
 
 	mergeSort( unsortedArray2, 0, unsortedArray2.size() - 1 );
 

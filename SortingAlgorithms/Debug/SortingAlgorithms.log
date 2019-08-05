@@ -1,1 +1,4 @@
-﻿
+﻿  main.cpp
+c:\users\carlos\documents\github\sorting-algorithms\sortingalgorithms\main.cpp(125): warning C4018: '<': signed/unsigned mismatch
+  SortingAlgorithms.vcxproj -> C:\Users\Carlos\Documents\GitHub\Sorting-Algorithms\SortingAlgorithms\Debug\SortingAlgorithms.exe
+  SortingAlgorithms.vcxproj -> C:\Users\Carlos\Documents\GitHub\Sorting-Algorithms\SortingAlgorithms\Debug\SortingAlgorithms.pdb (Partial PDB)
